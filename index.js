@@ -7,14 +7,8 @@ function saturdayFun(activity = 'roller-skate') {
     return `This Saturday, I want to ${activity}!`;
 }
 
-function wrapAdjective(highlight) {
-    if (highlight == '*') {
-        return (function (adjective) {
-            return `You are *${adjective}*!`
-        });
-    } else if (highlight == '||') {
-        return (function (adjective) {
-            return `You are ||${adjective}||!`
-        });
-    }
+function wrapAdjective(highlight='*') {
+    return (function (adjective = 'special') {
+        return `You are ${highlight}${adjective}${highlight}!`;
+    })
 }
